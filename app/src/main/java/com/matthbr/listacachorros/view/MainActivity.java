@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.matthbr.listacachorros.R;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         arrayRacas = new ArrayList<>();
 
         //Configura MyAdapter
-        MyAdapter adapter = new MyAdapter(arrayRacas);
+        MyAdapter adapter = new MyAdapter(arrayRacas,this);
 
         //Configura o Recycler View
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -41,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         JsonParser jsonParser = new JsonParser();
-        arrayRacas = jsonParser.getInfos(this,adapter);
-
-
+        jsonParser.getInfos(this,adapter);
     }
 }

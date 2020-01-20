@@ -5,9 +5,9 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/lblNomeRaca"
-        android:layout_width="440dp"
-        android:layout_height="62dp"
-        android:gravity=""
-        android:text="TextView" />
+        android:id="@+id/lblSRaca"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="TextView"
+        android:gravity="center"/>
 </LinearLayout>

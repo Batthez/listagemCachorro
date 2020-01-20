@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ListaCachorros</string>
+    <string name="title_activity_sub_raca">SubRacaActivity</string>
 </resources>
