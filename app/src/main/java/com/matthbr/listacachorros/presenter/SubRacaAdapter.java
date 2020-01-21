@@ -14,6 +14,18 @@ import com.matthbr.listacachorros.R;
 
 import java.util.ArrayList;
 
+
+/**
+ *
+ * Classe responsável pelas configurações do adapter da segunda tela
+ *
+ * <p>Nesta classe temos todas as configurações vindas do RecyclerView
+ *  Adapter para que possamos fazer o que quisermos no recyclerView.</p>
+ *
+ * @author Matheus Geiser <matheusgeiser@gmail.com>
+ * @since 1.0.0
+ *
+ */
 public class SubRacaAdapter extends RecyclerView.Adapter<SubRacaAdapter.MyViewHolder> {
 
     private ArrayList<String> listaSubRacas;
@@ -44,15 +56,29 @@ public class SubRacaAdapter extends RecyclerView.Adapter<SubRacaAdapter.MyViewHo
     public int getItemCount() {
         return listaSubRacas.size();
     }
-
+    /**
+     * Construtor da classe MyViewHolder
+     *
+     * Classe onde temos o controle de cada item através do
+     * construtor da classe.
+     *
+     *
+     * @author Matheus Geiser <matheusgeiser@gmail.com>
+     * @since 1.0.0
+     */
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView nSubRaca;
 
+        /**
+         * Construtor da Classe
+         *
+         * @param itemView do construtor, temos o controle de cada item do Recycler
+         */
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nSubRaca = itemView.findViewById(R.id.lblSRaca);
-
+            nSubRaca.setOnClickListener(this);
         }
 
         @Override
